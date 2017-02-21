@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>130</x>
+      <y>120</y>
+      <w>190</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Title
+--
+Data here
+--
+Construstor 
+Methods</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>120</y>
+      <w>310</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Timer
+--
+
+--
+-clock_t executionTime;
++void startTimer();
++void stopTimer();
++void resetTimer();
++void displayTimerInformation();
++long getExecutionTimeinMircoseconds();
+bg=#3c8b90
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>60</y>
+      <w>380</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>IntNode
+--
+- nodeData:int 
+- nodePointer : IntNode *
+--
+//gets/sets
++ getNodeData() : int
++ getNodePointer() : IntNode *
++ setNodeData(int) value : void
++ setNodePointer(IntNode * next) : void
+
++ IntNode() : constructor
++ IntNode(int value) : init
++ IntNode(int value, IntNode * nextNode) : constructor
+bg=blue
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1190</x>
+      <y>90</y>
+      <w>280</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>IntNodeArray
+--
+- size : int 
+- front : IntNode * 
+--
++ IntNodeArray(int size) : constructor
++ setAtIndex(int index, int value) : void
++ getFromIndex(int index) : int
++ getSize() : int
+group=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>0</x>
+      <y>20</y>
+      <w>310</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Created by yours truely Duncan Nguyen
+Denken wuz heer
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>70</x>
+      <y>360</y>
+      <w>420</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>Node&lt;Type&gt;
+--
+Data Members
+- nodeData : Type
+- nodePointer : Node&lt;Type&gt; *
+
+--
+Constructors
++ Node() : constructor
++ Node(Type Value) : contructor
++ Node(Type data, Node&lt;Type&gt; * pointer) : constructor
+Methods
++ getNodeData() : Type
++ getNodePointer() : Node&lt;Type&gt; *
++ setNodeData(Type data) : void
++ setNodePointer(Node&lt;Type&gt; * next): void 
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>700</x>
+      <y>40</y>
+      <w>790</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>Type Sample
+--
+bg=yellow
+group=1
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>680</x>
+      <y>350</y>
+      <w>310</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>Array &lt;Type&gt;
+--
+Data Members
+- front : Node&lt;Type&gt; *
+- size : int
+
+--
+Constructors
++ Array() : constructor
++ Array(int size) : contructor
+
+Methods 
++ getSize() : int
++ setAtIndex(int index, Type value) : void
++ getFromIndex(int index) : Type
+bg=magenta</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>500</y>
+      <w>220</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+m2=1..n</panel_attributes>
+    <additional_attributes>10.0;10.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1060</x>
+      <y>150</y>
+      <w>150</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-
+m2=1..n</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+</diagram>
